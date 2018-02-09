@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace CSharp7
 {
-    class Program
+    class Demo
     {
-        static void Main(string[] args)
+        Tuple<decimal, decimal> GetCoordinates()
+        {
+            //Latitude, Longitude
+            return new Tuple<decimal, decimal>(59.3308324m, 18.0453261m);
+        }
+        void TuplesAndDeconstruction()
+        {
+            var c1 = GetCoordinates();
+
+        }
+
+        void BinaryLiteralsAndDigitSeparators()
         {
 
         }
 
-
-        void OutVariables(string intString)
+        void OutVariablesAndDiscards(string intString)
         {
             int i;
             if (int.TryParse(intString, out i))
@@ -24,44 +34,24 @@ namespace CSharp7
 
         }
 
+        Person person;
+        void ThrowExpressions(Person p)
+        {
+
+            if (person == null)
+            {
+                throw new ArgumentNullException();
+            }
+            person = p;
+
+        }
+
         void PatternMatching(object x)
         {
 
         }
 
-        void TuplesAndDeconstruction()
-        {
-            var c1 = GetCoordinatesOld();
-            var lati1 = c1.Item1;
-            var longi1 = c1.Item2;
-
-        }
-
-        Tuple<decimal, decimal> GetCoordinatesOld()
-        {
-            //Latitude, Longitude
-            return new Tuple<decimal, decimal>(59.3308324m, 18.0453261m);
-        }
-
-        void Discards(string intString)
-        {
-
-            if (int.TryParse(intString, out int i))
-            {
-
-            }
-
-        }
-
-
         void LocalFunctions()
-        {
-
-        }
-
-
-
-        void BinaryLiteralsAndDigitSeparators()
         {
 
         }
@@ -73,20 +63,6 @@ namespace CSharp7
             var m = a.GetAmount();
 
             m += 100000;
-
-        }
-
-        Person person;
-
-
-        void ThrowExpressions(Person p)
-        {
-
-            if (person == null)
-            {
-                throw new ArgumentNullException();
-            }
-            person = p;
 
         }
 

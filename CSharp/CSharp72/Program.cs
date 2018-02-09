@@ -12,18 +12,6 @@ namespace CSharp72
         {
         }
 
-        //Span and ref-like types
-        void Span()
-        {
-            var arr = new byte[10];
-            Span<byte> bytes = arr; // Implicit cast from T[] to Span<T>
-
-
-            Span<byte> slicedBytes = bytes.Slice(start: 5, length: 2);
-            slicedBytes[0] = 42;
-            slicedBytes[1] = 43;
-        }
-
         void InParameters(int value)
         {
             value++;
