@@ -34,11 +34,11 @@ namespace CSharp7
 
         }
 
-        Person person;
+        Person person = null;
         void ThrowExpressions(Person p)
         {
 
-            if (person == null)
+            if (p == null)
             {
                 throw new ArgumentNullException();
             }
@@ -82,6 +82,10 @@ namespace CSharp7
     class Person
     {
         public string Name { get; set; }
+        public Person()
+        {
+            Name = String.Empty;
+        }
     }
     class Developer : Person
     {
